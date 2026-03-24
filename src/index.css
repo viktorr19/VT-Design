@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-cream: #FDFBF7;
+  --color-brand-peach: #FFEDD5;
+  --color-brand-orange: #F97316;
+  --color-brand-gold: #FDE68A;
+  --color-brand-ink: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-ink font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/70 backdrop-blur-md border-b border-black/5 sticky top-0 z-50;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-brand-orange text-white rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-orange/20;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 border border-brand-ink/10 rounded-full font-medium transition-all hover:bg-brand-ink hover:text-white active:scale-95;
+}
+
+.card-hover {
+  @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-orange/10;
+}
